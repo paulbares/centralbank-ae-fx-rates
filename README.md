@@ -1,6 +1,7 @@
 # Exchange Rates against UAE Dirham for VAT related obligations
 
-This repository provides the exchange rates against UAE Dirham for VAT related obligations. Values are fetched daily from https://www.centralbank.ae/en/fx-rates and stored in a json file named [rates.json](https://github.com/paulbares/centralbank-ae-fx-rates/blob/main/rates.json) to be easily consumed by third-party application. 
+This repository provides the exchange rates against UAE Dirham for VAT related obligations. Values are fetched daily from https://www.centralbank.ae/en/fx-rates and stored in a json file to be easily consumed by third-party application. 
+A new file is generated each day at 08:00 UTC and place in [rates/ directory](https://github.com/paulbares/centralbank-ae-fx-rates/tree/main/rates). Name of the file is the date at which it is generated in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format suffixed by `.json` (e.g `2021-09-17.json`).
 
 # Format
 
