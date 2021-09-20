@@ -37,8 +37,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add rates.json
-          git commit -m "generate \"$(date +'%Y-%m-%d')\"" -a
+          git add .
+          git commit -m "generate \"$(date +'%Y-%m-%d')\""
 
       - name: Push changes
         uses: ad-m/github-push-action@master
