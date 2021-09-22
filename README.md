@@ -11,11 +11,14 @@ A new file is generated each day at 08:00 AM UTC (12:00 PM GST) and put in [rate
 # Rest API
 
 To fetch the rates of the current day:
+
 ```bash
 curl https://raw.githubusercontent.com/paulbares/centralbank-ae-fx-rates/main/rates/$(date +'%Y-%m-%d').json
 ```
 
-# Example
+To access historical data, simply replace `$(date +'%Y-%m-%d')` with another date.
+
+Result:
 
 ```json
 {
