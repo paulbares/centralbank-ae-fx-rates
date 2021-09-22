@@ -8,6 +8,13 @@ A new file is generated each day at 08:00 AM UTC (12:00 PM GST) and put in [rate
 - Current date and time expressed according to ISO 8601
 - Currencies are in [ISO 4217 format](https://en.wikipedia.org/wiki/ISO_4217)
 
+# Rest API
+
+To fetch the rates of the current day:
+```bash
+curl https://raw.githubusercontent.com/paulbares/centralbank-ae-fx-rates/main/rates/$(date +'%Y-%m-%d').json
+```
+
 # Example
 
 ```json
