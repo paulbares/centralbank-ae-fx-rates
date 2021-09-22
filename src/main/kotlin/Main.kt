@@ -6,12 +6,14 @@ import java.io.File
 import java.io.FileWriter
 import java.lang.RuntimeException
 import java.math.BigDecimal
+import java.nio.file.Files
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.Year
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoField
+import kotlin.io.path.Path
 
 val nameToCode = hashMapOf(
     "Emirati Dirham" to "AED",
@@ -221,7 +223,9 @@ fun main() {
     if (count > 0) {
         throw RuntimeException("Could not find mapping for $count currencies: ${rateByCurrency.filter { it.value == null }.keys}")
     } else {
-        BufferedWriter(FileWriter(File(File("rates"), "${LocalDate.now()}.json")))
+        val now = LocalDate.now()
+        val parentDir = Files.createDirectories(Path("rates", "${now.year}"))
+        BufferedWriter(FileWriter(File(parentDir.toFile(), "$now.json")))
             .use { it.write(JSON.toJSONString(RatesReport(lastUpdatedDateTime, rateByCurrency))) }
         println("File successfully generated")
     }
