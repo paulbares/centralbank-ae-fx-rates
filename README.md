@@ -1,3 +1,5 @@
+> :warning: **The website and the way the page is displayed have changed, this script is not compatible anymore**: The new url is https://www.centralbank.ae/en/forex-eibor/exchange-rates/
+
 # Exchange Rates against UAE Dirham for VAT related obligations
 
 This repository provides the exchange rates against UAE Dirham for VAT related obligations. Values are fetched daily from https://www.centralbank.ae/en/fx-rates and stored in a json file to be easily consumed by third-party application via a simple http call (see below). 

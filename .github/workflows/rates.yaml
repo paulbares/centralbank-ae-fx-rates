@@ -1,9 +1,10 @@
 name: Rates
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron:  '0 6 * * *' # Runs at 06:00 UTC every day. 
+# Deactivate action 
+#on:
+#  workflow_dispatch:
+#  schedule:
+#    - cron:  '0 6 * * *' # Runs at 06:00 UTC every day.
     
 jobs:
   game:
